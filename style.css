@@ -3,15 +3,33 @@
     margin: 0;
 }
 
+
+@font-face {
+    font-family: "Arial Rounded MT Bold";
+    src: url(slkscr.ttf);
+}
+
+
 #game {
     width: 600px;
     height: 300px;
     border: 1px solid black;
     margin:auto;
-    background-image: url(img/image_processing20200616-23572-14e2ewo.gif);
+    background-image: url(img/happy_nook.gif);
     background-size: 500px;
     animation: backgrounda 3s linear infinite;
 }
+
+
+@keyframes backgrounda {
+    from {
+        background-position: 500px;
+    }
+    to {
+        background-position: 0px;
+    }
+}
+
 
 #character {
     width: 90px;
@@ -19,12 +37,27 @@
     background-image: url(img/Nook_pixel.png);
     position: relative;
     top: 200px;
-
 }
+
+
+#counter {
+    width: 90px;
+    height: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold", 
+    "Helvetica Rounded", Arial, 
+    sans-serif;
+    
+}
+
 
 .jump {
     animation: jump 0.4s linear;
 } 
+
 
 /*animation*/
 @keyframes jump { 
@@ -49,6 +82,7 @@
     }
 }
 
+
 #block {
     width: 32px;
     height: 40px;
@@ -58,10 +92,22 @@
     background-image: url(img/bag-of-bells.png);
     background-size: 32px 40px;
 
-    display: none;
+    display:none;
 
     animation: block 1s infinite linear;
 }
+
+
+@keyframes block {
+    0% {
+        left: 540px;
+    }
+
+    100% { 
+        left: -20px;
+    }
+} 
+
 
 #block2 {
     width: 32px;
@@ -75,15 +121,6 @@
     animation: block2 1s infinite linear;
 }
 
-@keyframes block {
-    0% {
-        left: 540px;
-    }
-
-    100% { 
-        left: -20px;
-    }
-} 
 
 @keyframes block2 {
     0% {
@@ -95,11 +132,26 @@
     }
 } 
 
-@keyframes backgrounda {
-    from {
-        background-position: 500px;
-    }
-    to {
-        background-position: 0px;
-    }
+#block3 {
+    width: 70px;
+    height: 65px;
+    position: relative;
+    top: 125px;
+    left: 540px;
+    background-image: url(img/tree.png);
+    background-size: 70px 65px; 
+
+    display: none;
+
+    animation: block2 1s infinite linear;
 }
+
+@keyframes block3 {
+    0% {
+        left: 540px;
+    }
+
+    100% {
+        left: -20px;
+    }
+} 
