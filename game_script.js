@@ -38,7 +38,6 @@ function jump() {
 let isAlive = setInterval(function () { 
     //get current character Y position check position of nook and block
     let nookTop = parseInt(window.getComputedStyle(character).getPropertyValue("top")); /*no pixel = parseInt, want number to do calculation */
-    // console.log(nookTop);
 
 
     for(i=0; i < obstacles.length; i++) {
@@ -53,10 +52,7 @@ let isAlive = setInterval(function () {
             hasCollided = true;
             alert ("Game Over!")
         }
-        
-        
     }
-
 }, 10);
 
 document.addEventListener("keydown", function(event) {
